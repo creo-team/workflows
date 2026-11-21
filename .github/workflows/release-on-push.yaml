@@ -6,8 +6,11 @@ on:
     branches: '*'
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   publish:
-    uses: krauters/shared-workflows/.github/workflows/release.yaml@main
+    uses: krauters/shared-workflows/.github/workflows/release.yaml@b34c0968945cbd3d091d1d621effedb43029c3dd # main
     secrets:
       GH_TOKEN_RELEASES: ${{ secrets.GH_TOKEN_RELEASES }}
